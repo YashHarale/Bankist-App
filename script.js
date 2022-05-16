@@ -198,7 +198,7 @@ const createUsernames = function (accs) {
 };
 createUsernames(accounts);
 
-const updateUI = function (acct) {
+const updateUI = (acct) => {
   // Display movements
   displayMovements(acct);
 
@@ -209,7 +209,7 @@ const updateUI = function (acct) {
   calcDisplaySummary(acct);
 };
 
-const startLogOutTimer = function () {
+const startLogOutTimer = () => {
 
     const tick = () => {
     const min = String(Math.trunc(time/60)).padStart(2,0);
@@ -225,7 +225,7 @@ const startLogOutTimer = function () {
       containerApp.style.opacity = 0;
     }
 
-    // Decrease 1s
+    // will Decrease 1s
     time-- ;
   }
 
@@ -236,7 +236,6 @@ const startLogOutTimer = function () {
   tick();
   const timer = setInterval(tick, 1000);
   return timer;
-
 }
 
 // Event Handler
@@ -326,7 +325,7 @@ btnTransfer.addEventListener('click', function (e) {
   }
 });
 
-btnLoan.addEventListener('click', function (e) {
+btnLoan.addEventListener('click', (e) => {
   e.preventDefault();
 
   const amount = Math.floor(inputLoanAmount.value);
