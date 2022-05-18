@@ -241,7 +241,7 @@ const startLogOutTimer = () => {
 // Event Handler
 let currentAccount, timer;
 
-btnLogin.addEventListener('click', function (e) {
+btnLogin.addEventListener('click', (e) => {
   // Prevent form from submitting
   e.preventDefault()
   currentAccount = accounts.find(
