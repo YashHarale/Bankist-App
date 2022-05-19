@@ -163,7 +163,7 @@ const calcDisplayBalance = function (acct) {
 
 // Display Summary
 
-const calcDisplaySummary = function (acct) {
+const calcDisplaySummary = (acct) => {
   const incomes = acct.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
