@@ -268,7 +268,6 @@ btnLogin.addEventListener('click', (e) => {
     weekday: 'long',
   };
   // const locale = navigator.language; //use to get locale(country) from browser
-  // console.log(locale);
   labelDate.textContent = new Intl.DateTimeFormat(currentAccount.locale, options).format(date);
 
 // Creating Current Date and Time manually
